@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ public class ProfilePage extends AppCompatActivity {
 
     ImageButton profileBtn, savesBtn;
     FloatingActionButton searchBtn;
+    TextView logoutBtn, reviewBtn1, reviewBtn2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +37,14 @@ public class ProfilePage extends AppCompatActivity {
             // Handle profile button click
             Intent intent = new Intent(ProfilePage.this, ProfilePage.class);
             startActivity(intent);
+            finish();
         });
         savesBtn.setImageResource(R.drawable.baseline_home_24);
         savesBtn.setOnClickListener(v -> {
             // Handle home button click
             Intent intent = new Intent(ProfilePage.this, HomePage.class);
             startActivity(intent);
+            finish();
         });
 
         searchBtn.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -48,7 +52,30 @@ public class ProfilePage extends AppCompatActivity {
             // Handle search button click
             Intent intent = new Intent(ProfilePage.this, SearchPage.class);
             startActivity(intent);
+            finish();
         });
 
+        logoutBtn = findViewById(R.id.logoutBtn);
+        logoutBtn.setOnClickListener(v -> {
+            // Handle logout button click
+            Intent intent = new Intent(ProfilePage.this, LoginPage.class);
+            startActivity(intent);
+            finish();
+        });
+
+        reviewBtn1 = findViewById(R.id.review_btn);
+        reviewBtn1.setOnClickListener(v -> {
+            // Handle review button click
+            Intent intent = new Intent(ProfilePage.this, CafeReviewPage.class);
+            startActivity(intent);
+            finish();
+        });
+        reviewBtn2 = findViewById(R.id.reviewBtn2);
+        reviewBtn2.setOnClickListener(v -> {
+            // Handle review button click
+            Intent intent = new Intent(ProfilePage.this, CafeReviewPage.class);
+            startActivity(intent);
+            finish();
+        });
     }
 }
