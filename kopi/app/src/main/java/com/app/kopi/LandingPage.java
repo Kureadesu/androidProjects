@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.activity.EdgeToEdge;
@@ -88,5 +89,10 @@ public class LandingPage extends AppCompatActivity {
         super.onStop();
         videoview.stopPlayback();
         videoview.suspend();
+    }
+
+    public void viewAllVisit (View view) {
+        // code for view all button
+        Toast.makeText(this, "View all button clicked", Toast.LENGTH_SHORT).show();
     }
 }
