@@ -5,15 +5,311 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDF5D7"
+    android:visibility="visible"
     tools:context=".VerifyPage">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="saved"
+        android:text="Saved"
+        android:textAlignment="textStart"
+        android:textColor="#2d150d"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:tint="#6d2c03"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115"
+        app:srcCompat="@drawable/baseline_favorite_24" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="69sp"
+        android:layout_height="48sp"
+        android:backgroundTint="#85695b"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:icon="@drawable/baseline_arrow_back_24"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <ScrollView
+        android:layout_width="412dp"
+        android:layout_height="730dp"
+        android:background="#efefef"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/cafe_img2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="109dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="10dp"
+                    android:text="Local Cafe"
+                    android:textColor="#c8601e"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@android:style/Widget.Material.RatingBar.Small"
+                    android:layout_width="22dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:numStars="5"
+                    android:paddingVertical="12dp"
+                    android:stepSize="1" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:layout_weight="0.5" />
+
+                <Button
+                    android:id="@+id/saved_viewCafeBtn1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#85695b"
+                    android:text="View"
+                    android:textColor="#FFFFFF" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp">
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#165B0E"
+                    android:paddingHorizontal="3dp"
+                    android:text="Open"
+                    android:textColor="#FFFFFF" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_weight="0.1" />
+
+                <Button
+                    android:id="@+id/button13"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#6d2c03"
+                    android:paddingHorizontal="3dp"
+                    android:text="Artisan"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_weight="0.1" />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="5dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#c8601e"
+                    android:paddingHorizontal="10dp"
+                    android:text="₱₱₱"
+                    android:textColor="#FFFFFF" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="{description}"
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/home_pic_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="{name}"
+                    android:textColor="#c8601e"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar5"
+                    style="@android:style/Widget.Material.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:numStars="5"
+                    android:paddingVertical="12dp"
+                    android:stepSize="1" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:layout_weight="0.5" />
+
+                <Button
+                    android:id="@+id/button15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:backgroundTint="#85695b"
+                    android:text="View"
+                    android:textColor="#FFFFFF" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp">
+
+                <Button
+                    android:id="@+id/button16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#940202"
+                    android:text="Closed"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#6d2c03"
+                    android:text="Artisan"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#c8601e"
+                    android:text="₱₱"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="90dp"
+                    android:layout_height="14dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="{description}"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

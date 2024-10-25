@@ -159,7 +159,7 @@
                     android:layout_weight="0.5" />
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/btn_viewResult1"
                     android:layout_width="135dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#85695b"
