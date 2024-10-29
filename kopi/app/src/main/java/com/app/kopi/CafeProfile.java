@@ -33,7 +33,7 @@ public class CafeProfile extends AppCompatActivity {
         @Override
         public void onActivityResult(Boolean result) {
             if (result) {
-                Toast.makeText(this, "Permission granted!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CafeProfile.this, "Permission granted!", Toast.LENGTH_SHORT).show();
             }
         }
     });
@@ -49,13 +49,27 @@ public class CafeProfile extends AppCompatActivity {
                 return insets;
             });
 
+            Button menuBtn = findViewById(R.id.viewMenuBtn);
+            menuBtn.setOnClickListener(this::onMenuButtonClick);
+
             Button backButton = findViewById(R.id.backBtn1);
             backButton.setOnClickListener(this::onButtonClick);
 
+            Button galleryBtn = findViewById(R.id.viewGalleryBtn);
+            galleryBtn.setOnClickListener(this::onGalleryButtonClick);
+
+            // use mapbox to show a specific location
         }
             public void onButtonClick(View view) {
             Intent intent = new Intent(this, HomePage.class);
             startActivity(intent);
         }
 
+        public void onMenuButtonClick(View view) {
+                startActivity(new Intent(this, MenuPage.class));
+        }
+
+        public void onGalleryButtonClick(View view) {
+                startActivity(new Intent(this, GalleryPage.class));
+        }
 }
