@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +24,7 @@ public class SearchPage extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Button back_btn = (Button) findViewById(R.id.backBtn);
+        ImageButton back_btn = findViewById(R.id.backBtn);
         back_btn.setOnClickListener(this::backBtn);
 
         Button viewResult1 = (Button) findViewById(R.id.btn_viewResult1);

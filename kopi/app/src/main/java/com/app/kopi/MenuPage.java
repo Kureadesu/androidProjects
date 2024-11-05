@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +25,7 @@ public class MenuPage extends AppCompatActivity {
             return insets;
         });
 
-        Button backtoProfile = findViewById(R.id.backBtn2);
+        ImageButton backtoProfile = findViewById(R.id.backBtn2);
         backtoProfile.setOnClickListener(this::onButtonClick);
     }
     public void onButtonClick(View view) {

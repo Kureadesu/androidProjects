@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -52,7 +53,7 @@ public class CafeProfile extends AppCompatActivity {
             Button menuBtn = findViewById(R.id.viewMenuBtn);
             menuBtn.setOnClickListener(this::onMenuButtonClick);
 
-            Button backButton = findViewById(R.id.backBtn1);
+            ImageButton backButton = findViewById(R.id.backBtn1);
             backButton.setOnClickListener(this::onButtonClick);
 
             Button galleryBtn = findViewById(R.id.viewGalleryBtn);
